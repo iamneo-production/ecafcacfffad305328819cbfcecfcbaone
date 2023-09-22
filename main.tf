@@ -1,6 +1,5 @@
 terraform {
-  required_version = ">= 0.12"
-  {
+  required_providers {
       aws={
           source=" "
       }
@@ -12,10 +11,8 @@ provider "aws" {
     screct-key="r7cMUisYe0LrH3zaQf1b1SYjVoeFqQhqBu7EC2E2"
 }
 resource "aws instance" "Ubuntu Server 20.04"{
-    ami="ami-0d52744d6551d851e"
-    instance-type="t2.micro"
+    ami="  default     = "ami-0d52744d6551d851e"
+"
+    instance-type="var.instance-type"
 }
-output "public-ip"
-{
-    value=aws-instance.demo-instance.public.ip
-}
+
